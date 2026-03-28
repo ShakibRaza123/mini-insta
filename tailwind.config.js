@@ -1,4 +1,10 @@
+/** @type {import('tailwindcss').Config} */
 export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
   theme: {
     extend: {
       keyframes: {
@@ -25,9 +31,10 @@ export default {
         float: 'floatUp 1.2s ease-out forwards',
         particle: 'particle 0.6s ease-out forwards',
       },
-      plugins: [
-        require('tailwind-scrollbar-hide')
-      ]
     },
   },
-};
+
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
+}
